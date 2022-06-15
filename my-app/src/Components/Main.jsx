@@ -16,7 +16,6 @@ const Main = () => {
    return (
       <main id='main'>
          <Hero />
-
          <About />
          <Features />
          <Services />

@@ -16,7 +16,6 @@ import User from '../Models/User.js';
 router.post('/register', (req, res) => {
    // Form validation
    const { errors, isValid } = validateRegisterInput(req.body);
-   console.log(req.body);
    // Check validation
    if (!isValid) {
       return res.status(400).json(errors);

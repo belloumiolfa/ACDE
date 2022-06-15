@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
-import Breadcrumbs from './Breadcrumbs';
+import Breadcrumbs from '../Commun/Breadcrumbs';
 import { useForm } from 'react-hook-form';
-import { addPost } from '../Redux/Actions/postActions';
+import { addPost } from '../../Redux/Actions/postActions';
 
 const PostForm = props => {
    const { register, handleSubmit } = useForm();

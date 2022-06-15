@@ -3,7 +3,7 @@ import { Link as RoutePath, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Posts from './Posts';
-import Breadcrumbs from './Breadcrumbs';
+import Breadcrumbs from '../Commun/Breadcrumbs';
 
 const Blog = props => {
    return (

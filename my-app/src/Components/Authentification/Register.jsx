@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
-import Breadcrumbs from './Breadcrumbs';
+import Breadcrumbs from '../Commun/Breadcrumbs';
 import { useForm } from 'react-hook-form';
-import { registerUser } from '../Redux/Actions/authActions';
+import { registerUser } from '../../Redux/Actions/authActions';
 
 const Register = props => {
    const { register, handleSubmit } = useForm();
@@ -17,7 +17,6 @@ const Register = props => {
          password1: data.password1,
          password2: data.password2,
       };
-      console.log(newUser);
       props.registerUser(newUser, props.history);
    };
 

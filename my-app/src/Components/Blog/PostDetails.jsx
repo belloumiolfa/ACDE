@@ -1,5 +1,5 @@
 import React from 'react';
-import Breadcrumbs from './Breadcrumbs';
+import Breadcrumbs from '../Commun/Breadcrumbs';
 import CountUp from 'react-countup';
 
 const PostDetails = () => {

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import Breadcrumbs from './Breadcrumbs';
+import Breadcrumbs from '../../Commun/Breadcrumbs';
 
 const ProjectDetails = () => {
    useEffect(() => {});

@@ -3,9 +3,9 @@ import React, { useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { Link as RoutePath, withRouter } from 'react-router-dom';
 
-import mobileNave from '../Utils/Navigation';
+import mobileNave from '../../Utils/Navigation';
 
-import { logoutUser } from '../Redux/Actions/authActions';
+import { logoutUser } from '../../Redux/Actions/authActions';
 import { connect } from 'react-redux';
 
 const Header = props => {

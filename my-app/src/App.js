@@ -11,17 +11,17 @@ import store from './Redux/Store';
 import { setCurrentUser, logoutUser } from './Redux/Actions/authActions';
 
 /* =========== Import Components =========== */
-import Home from './Components/Home';
-import ProjectDetails from './Components/ProjectDetails';
-import ScrollToTop from './Components/ScrollToTop';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import Blog from './Components/Blog';
-import PostDetails from './Components/PostDetails';
-import Login from './Components/Login';
-import Register from './Components/Register';
-import PrivateRoute from './Components/PrivateRoute';
-import PostForm from './Components/PostForm';
+import Home from './Components/WelcomLayaout/Home';
+import ProjectDetails from './Components/WelcomLayaout/Portfolio/ProjectDetails';
+import ScrollToTop from './Components/Commun/ScrollToTop';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
+import Blog from './Components/Blog/Blog';
+import PostDetails from './Components/Blog/PostDetails';
+import Login from './Components/Authentification/Login';
+import Register from './Components/Authentification/Register';
+import PrivateRoute from './Components/Commun/PrivateRoute';
+import PostForm from './Components/Blog/PostForm';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import Breadcrumbs from './Breadcrumbs';
+import Breadcrumbs from '../Commun/Breadcrumbs';
 import { useForm } from 'react-hook-form';
 import { connect } from 'react-redux';
-import { loginUser } from '../Redux/Actions/authActions';
+import { loginUser } from '../../Redux/Actions/authActions';
 
 function Login(props) {
    const { register, handleSubmit } = useForm();
