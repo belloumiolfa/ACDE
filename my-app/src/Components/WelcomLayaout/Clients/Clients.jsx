@@ -28,17 +28,17 @@ const Clients = () => {
             >
                <img
                   className='item'
-                  src='assets/img/clients/client-1.png'
+                  src='/assets/img/clients/client-1.png'
                   alt=''
                />
                <img
                   className='item'
-                  src='assets/img/clients/client-2.png'
+                  src='/assets/img/clients/client-2.png'
                   alt=''
                />
                <img
                   className='item'
-                  src='assets/img/clients/client-3.png'
+                  src='/assets/img/clients/client-3.png'
                   alt=''
                />
             </OwlCarousel>

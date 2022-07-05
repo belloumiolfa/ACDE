@@ -17,7 +17,7 @@ const Services = () => {
                >
                   <div className='icon-box'>
                      <div className='icon'>
-                        <i class='fas fa-people-arrows'></i>
+                        <i className='fas fa-people-arrows'></i>
                      </div>
                      <h4>Comité sur le secteur public</h4>
                      <p>
@@ -35,7 +35,7 @@ const Services = () => {
                >
                   <div className='icon-box'>
                      <div className='icon'>
-                        <i class='fas fa-user-lock'></i>
+                        <i className='fas fa-user-lock'></i>
                      </div>
                      <h4>Comité sur le secteur privé</h4>
                      <p>
@@ -54,7 +54,7 @@ const Services = () => {
                >
                   <div className='icon-box'>
                      <div className='icon'>
-                        <i class='fas fa-hand-holding-usd'></i>
+                        <i className='fas fa-hand-holding-usd'></i>
                      </div>
                      <h4>Comité financière</h4>
                      <p>
@@ -71,7 +71,7 @@ const Services = () => {
                >
                   <div className='icon-box'>
                      <div className='icon'>
-                        <i class='fas fa-project-diagram'></i>
+                        <i className='fas fa-project-diagram'></i>
                      </div>
                      <h4>Création des projets</h4>
                      <p>
@@ -89,7 +89,7 @@ const Services = () => {
                >
                   <div className='icon-box'>
                      <div className='icon'>
-                        <i class='fas fa-search'></i>
+                        <i className='fas fa-search'></i>
                      </div>
                      <h4>Comité de l’information</h4>
                      <p>
@@ -106,7 +106,7 @@ const Services = () => {
                >
                   <div className='icon-box'>
                      <div className='icon'>
-                        <i class='far fa-address-card'></i>
+                        <i className='far fa-address-card'></i>
                      </div>
                      <h4>Comité des contacts</h4>
                      <p>

@@ -78,7 +78,7 @@ function Login(props) {
 
                      <p>
                         Je ne suis pas un membre{' '}
-                        <Link to='/register'>S'inscrire içi</Link>.
+                        <Link to='/welcom/register'>S'inscrire içi</Link>.
                      </p>
                      <div className='text-center'>
                         <button type='submit' style={{ marginRight: '20px' }}>

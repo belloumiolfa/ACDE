@@ -11,7 +11,7 @@ const About = () => {
                   data-aos-delay='100'
                >
                   <img
-                     src='assets/img/about.jpg'
+                     src='/assets/img/about.jpg'
                      className='img-fluid'
                      alt=''
                   />

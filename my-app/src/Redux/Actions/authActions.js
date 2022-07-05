@@ -31,9 +31,11 @@ export const loginUser = (userData, history) => dispatch => {
          setAuthToken(token);
          // Decode token to get user data
          const decoded = jwt_decode(token);
+         decoded.admin === true
+            ? history.push('/dashboard')
+            : history.push('/blog/acceuil');
          // Set current user
          dispatch(setCurrentUser(decoded));
-         history.push('/blog');
       })
       .catch(err =>
          dispatch({
@@ -56,7 +58,8 @@ export const setUserLoading = () => {
    };
 };
 // Log user out
-export const logoutUser = () => dispatch => {
+export const logoutUser = history => dispatch => {
+   history.push('/welcom/login');
    // Remove token from local storage
    localStorage.removeItem('jwtToken');
    // Remove auth header for future requests

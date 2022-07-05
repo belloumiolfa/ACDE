@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import {
+   BrowserRouter as Router,
+   Redirect,
+   Route,
+   Switch,
+} from 'react-router-dom';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import $ from 'jquery';
@@ -11,17 +16,10 @@ import store from './Redux/Store';
 import { setCurrentUser, logoutUser } from './Redux/Actions/authActions';
 
 /* =========== Import Components =========== */
-import Home from './Components/WelcomLayaout/Home';
-import ProjectDetails from './Components/WelcomLayaout/Portfolio/ProjectDetails';
-import ScrollToTop from './Components/Commun/ScrollToTop';
-import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
-import Blog from './Components/Blog/Blog';
-import PostDetails from './Components/Blog/PostDetails';
-import Login from './Components/Authentification/Login';
-import Register from './Components/Authentification/Register';
 import PrivateRoute from './Components/Commun/PrivateRoute';
-import PostForm from './Components/Blog/PostForm';
+import WelcomLayaout from './Components/WelcomLayaout/WelcomLayaout';
+import BlogLayaout from './Components/Blog/BlogLayaout';
+import AdminLayout from './Components/AdminLayaout/AdminLayout';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -39,7 +37,7 @@ if (localStorage.jwtToken) {
       // Logout user
       store.dispatch(logoutUser());
       // Redirect to login
-      window.location.href = './login';
+      window.location.href = './welcom/login';
    }
 }
 
@@ -67,18 +65,21 @@ const App = () => {
       <Provider store={store}>
          <div className='App'>
             <Router>
-               <Header />
-               <Route exact path='/' component={Home} />
-               <Route exact path='/project' component={ProjectDetails} />
-               <Route exact path='/login' component={Login} />
-               <Route exact path='/register' component={Register} />
-
-               <PrivateRoute exact path='/blog' component={Blog} />
-               <PrivateRoute exact path='/blog/:id' component={PostDetails} />
-               <PrivateRoute exact path='/addPost' component={PostForm} />
-
-               <Footer />
-               <ScrollToTop />
+               <Switch>
+                  <Route
+                     path='/welcom'
+                     render={props => <WelcomLayaout {...props} />}
+                  />
+                  <Route
+                     path='/blog'
+                     render={props => <BlogLayaout {...props} />}
+                  />
+                  <Route
+                     path='/dashboard'
+                     render={props => <AdminLayout {...props} />}
+                  />
+                  <Redirect from='/' to='/welcom/home' />
+               </Switch>
             </Router>
          </div>
       </Provider>

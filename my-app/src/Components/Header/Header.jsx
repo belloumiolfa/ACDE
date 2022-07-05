@@ -14,7 +14,7 @@ const Header = props => {
    }, []);
 
    const handleLogOut = () => {
-      props.logoutUser(false);
+      props.logoutUser(props.history);
    };
 
    return (
@@ -64,7 +64,11 @@ const Header = props => {
                   </li>
                   {props.auth.isAuthenticated === true && (
                      <li>
-                        <RoutePath to='/blog' className='active' smooth='true'>
+                        <RoutePath
+                           to='/blog/acceuil'
+                           className='active'
+                           smooth='true'
+                        >
                            Blog
                         </RoutePath>
                      </li>
@@ -86,7 +90,7 @@ const Header = props => {
             ) : (
                <RoutePath
                   smooth='true'
-                  to='/login'
+                  to='/welcom/login'
                   className='get-started-btn scrollto'
                >
                   Connecter

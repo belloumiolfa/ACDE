@@ -63,7 +63,7 @@ const Hero = () => {
                </div>
                <div className='col-xl-2 col-md-4 col-6 mt-4 mt-xl-0'>
                   <div className='icon-box'>
-                     <i class='fas fa-calendar-week'></i>
+                     <i className='fas fa-calendar-week'></i>
                      <h3>
                         <Link to='/'> 17/02/2012</Link>
                      </h3>
